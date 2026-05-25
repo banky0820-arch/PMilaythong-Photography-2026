@@ -1,0 +1,128 @@
+export type Category = 'Landscape' | 'Portrait' | 'Pet'
+
+export interface ProjectImage {
+  src: string
+  alt: string
+  width: number
+  height: number
+}
+
+export interface Project {
+  id: string
+  slug: string
+  title: string
+  category: Category
+  year: number
+  client: string
+  location: string
+  description: string
+  coverImage: string
+  coverImageAlt: string
+  images: ProjectImage[]
+  featured: boolean
+}
+
+export const projects: Project[] = [
+  {
+    id: '1',
+    slug: 'new-york',
+    title: 'New York',
+    category: 'Landscape',
+    year: 2024,
+    client: 'Self-directed',
+    location: 'New York City, USA',
+    description:
+      'A study of New York City through its monuments and negative space. From the silent geometry of the 9/11 Memorial to the soaring bones of the Oculus and Lady Liberty standing watch from the harbor, each frame searches for stillness inside one of the world\'s most relentless cities.',
+    coverImage: '/images/feature.jpg',
+    coverImageAlt: '9/11 Memorial reflecting pool with Manhattan skyline, black and white',
+    images: [
+      { src: '/images/gallery/09.jpg', alt: 'Central Park Reservoir with Manhattan skyline', width: 1600, height: 900 },
+      { src: '/images/gallery/12.jpg', alt: 'WTC Oculus and One World Trade Center', width: 1200, height: 900 },
+      { src: '/images/gallery/13.jpg', alt: 'Empire State Building at night', width: 800, height: 1200 },
+      { src: '/images/gallery/11.jpg', alt: 'Statue of Liberty from the water', width: 1600, height: 900 },
+      { src: '/images/gallery/14.jpg', alt: 'Manhattan Bridge steel detail', width: 800, height: 1200 },
+      { src: '/images/works/03.jpg', alt: 'WTC Oculus and One World Trade, black and white', width: 1200, height: 900 },
+      { src: '/images/gallery/10.jpg', alt: 'Waterfall and rock garden landscape', width: 1200, height: 900 },
+    ],
+    featured: true,
+  },
+  {
+    id: '2',
+    slug: 'kagome',
+    title: 'Kagome',
+    category: 'Pet',
+    year: 2024,
+    client: 'Self-directed',
+    location: 'California, USA',
+    description:
+      'A portrait series following Kagome — a tricolor Corgi whose expression shifts from mischief to quiet contemplation in a single frame. Shot across seasons and settings, the project explores personality through light, environment, and the bond between subject and camera.',
+    coverImage: '/images/gallery/02.jpg',
+    coverImageAlt: 'Corgi with pink bandana in front of blooming roses',
+    images: [
+      { src: '/images/hero-portrait.jpg', alt: 'Corgi in floral shirt under cherry blossoms', width: 900, height: 1200 },
+      { src: '/images/gallery/01.jpg', alt: 'Corgi sitting on a tree stump', width: 800, height: 1200 },
+      { src: '/images/gallery/06.jpg', alt: 'Corgi with Christmas truck and holiday decor', width: 800, height: 1200 },
+      { src: '/images/gallery/07.jpg', alt: 'Corgi in Halloween costume on an antique chair', width: 1200, height: 900 },
+      { src: '/images/gallery/08.jpg', alt: 'Corgi black and white portrait in tall grass', width: 1200, height: 900 },
+    ],
+    featured: true,
+  },
+  {
+    id: '3',
+    slug: 'best-friends',
+    title: 'Best Friends',
+    category: 'Pet',
+    year: 2023,
+    client: 'Self-directed',
+    location: 'California, USA',
+    description:
+      'Two dogs, one frame, an ongoing series pairing Corgis and Shih Tzus in natural and styled environments. The work celebrates the distinct personality each animal brings to a shared moment, from sun drenched lawns to intimate indoor studies.',
+    coverImage: '/images/gallery/03.jpg',
+    coverImageAlt: 'Two Corgis sitting on grass in front of roses',
+    images: [
+      { src: '/images/works/01.jpg', alt: 'Corgi black and white closeup portrait', width: 1200, height: 900 },
+      { src: '/images/gallery/04.jpg', alt: 'Shih Tzu rolling in the grass', width: 1200, height: 900 },
+      { src: '/images/gallery/05.jpg', alt: 'Shih Tzu black and white with striped tie', width: 1200, height: 900 },
+      { src: '/images/works/02.jpg', alt: 'Shih Tzu with flowers and a blue tie', width: 1200, height: 900 },
+    ],
+    featured: true,
+  },
+  {
+    id: '6',
+    slug: 'still-life',
+    title: 'Still Life',
+    category: 'Portrait',
+    year: 2022,
+    client: 'Self-directed',
+    location: 'California, USA',
+    description:
+      'A quieter side of the pet portrait work — close studies in natural light that prioritize mood over moment. Black and white conversions reduce the subject to its essentials: eyes, expression, and the story held in a single look.',
+    coverImage: '/images/works/01.jpg',
+    coverImageAlt: 'Corgi black and white portrait closeup',
+    images: [
+      { src: '/images/gallery/08.jpg', alt: 'Corgi in tall grass, black and white', width: 1200, height: 900 },
+      { src: '/images/gallery/05.jpg', alt: 'Shih Tzu with tie, black and white', width: 1200, height: 900 },
+      { src: '/images/works/02.jpg', alt: 'Shih Tzu with flowers and blue tie', width: 1200, height: 900 },
+    ],
+    featured: false,
+  },
+]
+
+export function getProjectBySlug(slug: string): Project | undefined {
+  return projects.find((p) => p.slug === slug)
+}
+
+export function getFeaturedProjects(): Project[] {
+  return projects.filter((p) => p.featured)
+}
+
+export function getAdjacentProjects(slug: string): {
+  prev: Project | null
+  next: Project | null
+} {
+  const index = projects.findIndex((p) => p.slug === slug)
+  return {
+    prev: index > 0 ? projects[index - 1] : null,
+    next: index < projects.length - 1 ? projects[index + 1] : null,
+  }
+}
