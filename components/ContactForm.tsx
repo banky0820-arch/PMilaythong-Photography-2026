@@ -140,10 +140,10 @@ export default function ContactForm() {
             <p className="font-sans text-sm text-signal">
               Something went wrong. Please try again or email directly at{' '}
               <a
-                href="mailto:hello@elenavasquez.com"
+                href="mailto:info@pmilaythong.com"
                 className="underline hover:text-cream transition-colors"
               >
-                hello@elenavasquez.com
+                info@pmilaythong.com
               </a>
               .
             </p>
