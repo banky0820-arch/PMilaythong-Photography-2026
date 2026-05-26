@@ -1,23 +1,9 @@
 import type { Metadata } from 'next'
-
-declare global {
-  interface Window {
-    Calendly?: {
-      initBadgeWidget: (opts: {
-        url: string
-        text: string
-        color: string
-        textColor: string
-        branding: boolean
-      }) => void
-    }
-  }
-}
 import { Bebas_Neue, DM_Sans } from 'next/font/google'
-import Script from 'next/script'
 import './globals.css'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
+import CalendlyWidget from '@/components/CalendlyWidget'
 
 const bebasNeue = Bebas_Neue({
   weight: '400',
@@ -56,28 +42,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${bebasNeue.variable} ${dmSans.variable}`}>
-      <head>
-        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
-      </head>
       <body>
         <Nav />
         <main>{children}</main>
         <Footer />
-        <Script
-          src="https://assets.calendly.com/assets/external/widget.js"
-          strategy="afterInteractive"
-          onLoad={() => {
-            if (typeof window !== 'undefined' && window.Calendly) {
-              window.Calendly.initBadgeWidget({
-                url: 'https://calendly.com/pmilaythong-info',
-                text: 'Schedule time with me',
-                color: '#0069ff',
-                textColor: '#ffffff',
-                branding: true,
-              })
-            }
-          }}
-        />
+        <CalendlyWidget />
       </body>
     </html>
   )
