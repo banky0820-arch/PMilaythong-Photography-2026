@@ -23,16 +23,19 @@ export default function HomePage() {
               Approach
             </p>
             <p className="font-sans text-xl text-cream/75 leading-[1.75] mb-6">
-              My work is rooted in outdoor, natural light photography. No studios, no artificial setups, no manufactured emotion. Just families, their dogs, and the honest beauty of life as it actually unfolds. Every session is an exercise in patience, presence, and trust. Every final image is a testament to what happens when all three come together.
+              Photography is my passion and at the heart of it is the pursuit of raw emotion. The kind that can&apos;t be directed, only caught. It is a calling I answered from the moment I held my first camera at nine years old, when I understood that light and time were already telling a story, and that I had the ability to preserve it. That realization never left me.
             </p>
             <p className="font-sans text-base text-cream/55 leading-[1.75] mb-6">
-              When I travel, landscape photography becomes its own language. Standing before a mountain, a coastline, or an open sky, the moment transcends words entirely. It is beyond awe, and the only worthy response is to raise the camera and hold it still.
+              I work exclusively on location, in natural light, because the surroundings are never just a backdrop — they are part of the story. The way light falls through trees, the open sky at golden hour, the quiet energy of a place that has never been staged — these are the conditions where the most honest images live.
             </p>
             <p className="font-sans text-base text-cream/55 leading-[1.75] mb-6">
-              I do not simply take photographs. I create permanent records of fleeting moments. Images built to outlast the day they were taken, and to mean more with every passing year.
+              I love working with dogs because they cannot pretend. They bring unfiltered personality and emotion to every frame, and that energy elevates everyone around them. There is something extraordinary about photographing a family in their element — kids, dogs, and all the beautiful chaos that comes with them — and finding the moment inside the moment.
+            </p>
+            <p className="font-sans text-base text-cream/55 leading-[1.75] mb-6">
+              Every session is an exercise in patience, presence, and trust. Every final image is a testament to what happens when all three come together.
             </p>
             <p className="font-sans text-base text-signal leading-[1.75]">
-              This is not just what I do. It is who I am.
+              I do not simply take photographs. I create permanent records of fleeting moments — images built to outlast the day they were taken, and to mean more with every passing year.
             </p>
           </ScrollReveal>
 
