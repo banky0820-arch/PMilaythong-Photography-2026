@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 }
 
 const socials = [
-  { label: 'Instagram', href: 'https://instagram.com' },
+  { label: 'Instagram', href: 'https://instagram.com/san_diego_photographer_' },
 ]
 
 export default function ContactPage() {
