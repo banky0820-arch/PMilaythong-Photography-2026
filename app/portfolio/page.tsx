@@ -24,7 +24,7 @@ export default function PortfolioPage() {
           Didn&apos;t receive your gallery link? Reach out and I&apos;ll resend it right away.
         </p>
         <a
-          href="https://mcp.fast.io/mcp"
+          href="https://go.fast.io/home/shares"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block border border-cream/20 text-cream font-sans text-xs tracking-[0.2em] uppercase font-medium px-8 py-4 hover:border-signal hover:text-signal transition-colors duration-200"
