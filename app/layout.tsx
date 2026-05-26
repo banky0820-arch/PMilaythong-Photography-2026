@@ -3,7 +3,6 @@ import { Bebas_Neue, DM_Sans } from 'next/font/google'
 import './globals.css'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
-import CalendlyWidget from '@/components/CalendlyWidget'
 
 const bebasNeue = Bebas_Neue({
   weight: '400',
@@ -46,7 +45,6 @@ export default function RootLayout({
         <Nav />
         <main>{children}</main>
         <Footer />
-        <CalendlyWidget />
       </body>
     </html>
   )
