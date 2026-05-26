@@ -43,7 +43,7 @@ export async function POST(req: NextRequest) {
         <head><meta charset="utf-8" /></head>
         <body style="margin:0;padding:40px 20px;font-family:sans-serif;background:#0a0a0a;color:#f5f5f0;max-width:600px;">
           <p style="color:#FF4D00;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:24px;">
-            New enquiry via elenavasquez.com
+            New enquiry via pmilaythong.com
           </p>
           <h2 style="font-size:28px;margin:0 0 24px;color:#f5f5f0;">${subject}</h2>
           <table style="border-collapse:collapse;width:100%;margin-bottom:24px;">
