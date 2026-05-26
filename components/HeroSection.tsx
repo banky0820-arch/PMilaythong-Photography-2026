@@ -1,31 +1,16 @@
 'use client'
 
-import { motion, useScroll, useTransform } from 'framer-motion'
-import { useRef } from 'react'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 
 const EASE = [0.25, 0.46, 0.45, 0.94] as const
 
 export default function HeroSection() {
-  const ref = useRef<HTMLDivElement>(null)
-
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['start start', 'end start'],
-  })
-
-  const imageY = useTransform(scrollYProgress, [0, 1], ['0%', '20%'])
-  const textY = useTransform(scrollYProgress, [0, 1], ['0%', '35%'])
-  const opacity = useTransform(scrollYProgress, [0, 0.65], [1, 0])
-
   return (
-    <div ref={ref} className="relative h-screen overflow-hidden">
-      {/* Parallax image layer */}
-      <motion.div
-        style={{ y: imageY }}
-        className="absolute inset-0 scale-110 img-cursor"
-      >
+    <div className="relative h-screen overflow-hidden">
+      {/* Background image */}
+      <div className="absolute inset-0 scale-110 img-cursor">
         <Image
           src="/images/feature.jpg"
           alt="9/11 Memorial reflecting pool, New York City"
@@ -35,11 +20,13 @@ export default function HeroSection() {
           className="object-cover"
         />
         <div className="absolute inset-0 bg-ink/35" />
-      </motion.div>
+      </div>
 
       {/* Centered logo */}
       <motion.div
-        style={{ y: textY, opacity }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.0, ease: EASE }}
         className="absolute inset-0 flex flex-col items-center justify-center px-6 md:px-10"
       >
         <motion.div
