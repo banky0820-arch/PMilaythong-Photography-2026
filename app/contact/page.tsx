@@ -38,6 +38,15 @@ export default function ContactPage() {
 
               <div>
                 <p className="font-sans text-[10px] tracking-[0.28em] uppercase text-cream/30 mb-1.5">
+                  Phone
+                </p>
+                <a href="tel:+16613012129" className="font-sans text-base text-signal hover:text-cream transition-colors duration-200">
+                  (661) 301-2129
+                </a>
+              </div>
+
+              <div>
+                <p className="font-sans text-[10px] tracking-[0.28em] uppercase text-cream/30 mb-1.5">
                   Based
                 </p>
                 <p className="font-sans text-base text-cream">San Diego</p>
