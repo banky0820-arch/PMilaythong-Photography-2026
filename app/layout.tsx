@@ -1,4 +1,18 @@
 import type { Metadata } from 'next'
+
+declare global {
+  interface Window {
+    Calendly?: {
+      initBadgeWidget: (opts: {
+        url: string
+        text: string
+        color: string
+        textColor: string
+        branding: boolean
+      }) => void
+    }
+  }
+}
 import { Bebas_Neue, DM_Sans } from 'next/font/google'
 import Script from 'next/script'
 import './globals.css'
@@ -49,10 +63,21 @@ export default function RootLayout({
         <Nav />
         <main>{children}</main>
         <Footer />
-        <Script src="https://assets.calendly.com/assets/external/widget.js" strategy="afterInteractive" />
-        <Script id="calendly-badge" strategy="afterInteractive">
-          {`window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/pmilaythong-info', text: 'Schedule time with me', color: '#0069ff', textColor: '#ffffff', branding: true }); }`}
-        </Script>
+        <Script
+          src="https://assets.calendly.com/assets/external/widget.js"
+          strategy="afterInteractive"
+          onLoad={() => {
+            if (typeof window !== 'undefined' && window.Calendly) {
+              window.Calendly.initBadgeWidget({
+                url: 'https://calendly.com/pmilaythong-info',
+                text: 'Schedule time with me',
+                color: '#0069ff',
+                textColor: '#ffffff',
+                branding: true,
+              })
+            }
+          }}
+        />
       </body>
     </html>
   )
