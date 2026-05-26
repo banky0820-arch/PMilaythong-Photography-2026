@@ -3,8 +3,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import { motion, useScroll, useMotionValueEvent } from 'framer-motion'
-import { useState } from 'react'
+import { motion } from 'framer-motion'
+import { useState, useEffect } from 'react'
 import clsx from 'clsx'
 
 const links = [
@@ -17,13 +17,14 @@ const links = [
 
 export default function Nav() {
   const pathname = usePathname()
-  const { scrollY } = useScroll()
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
 
-  useMotionValueEvent(scrollY, 'change', (latest) => {
-    setScrolled(latest > 60)
-  })
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 60)
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
     <>
