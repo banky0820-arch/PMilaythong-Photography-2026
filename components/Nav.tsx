@@ -97,7 +97,7 @@ export default function Nav() {
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-          className="md:hidden relative z-60 flex flex-col gap-[5px] p-2"
+          className="md:hidden relative z-[60] flex flex-col gap-[5px] p-2"
         >
           <motion.span
             animate={menuOpen ? { rotate: 45, y: 6.5 } : { rotate: 0, y: 0 }}

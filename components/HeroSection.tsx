@@ -44,7 +44,7 @@ export default function HeroSection() {
             alt="PMilaythong Photography"
             width={700}
             height={323}
-            className="w-[clamp(480px,60vw,700px)] h-auto"
+            className="w-[clamp(240px,70vw,700px)] h-auto"
             priority
           />
         </motion.div>

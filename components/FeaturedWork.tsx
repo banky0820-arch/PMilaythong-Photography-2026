@@ -79,7 +79,7 @@ export default function FeaturedWork({ projects }: Props) {
           transition={{ delay: 0.08, duration: 1, ease: EASE }}
           className="mt-4 md:mt-5"
         >
-          <Tile project={p3} aspectClass="aspect-[21/8]" sizes="100vw" />
+          <Tile project={p3} aspectClass="aspect-[4/3] md:aspect-[21/8]" sizes="100vw" />
         </motion.div>
       )}
     </section>
