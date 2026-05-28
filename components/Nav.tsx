@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
@@ -38,13 +37,14 @@ export default function Nav() {
         )}
       >
         <Link href="/" onClick={() => setMenuOpen(false)} className="flex items-center">
-          <Image
-            src="/images/logo.png"
-            alt="PMilaythong Photography"
-            width={174}
-            height={80}
+          <video
+            src="/images/logo.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
             className="h-20 w-auto"
-            priority
+            aria-label="PMilaythong Photography"
           />
         </Link>
 
