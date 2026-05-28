@@ -10,7 +10,7 @@ interface Props {
   direction?: 'up' | 'left' | 'right' | 'none'
 }
 
-const EASE = [0.25, 0.46, 0.45, 0.94] as const
+const EASE = [0.16, 1, 0.3, 1] as const
 
 export default function ScrollReveal({
   children,
@@ -22,12 +22,12 @@ export default function ScrollReveal({
     <motion.div
       initial={{
         opacity: 0,
-        y: direction === 'up' ? 60 : 0,
-        x: direction === 'left' ? -50 : direction === 'right' ? 50 : 0,
+        y: direction === 'up' ? 44 : 0,
+        x: direction === 'left' ? -40 : direction === 'right' ? 40 : 0,
       }}
       whileInView={{ opacity: 1, y: 0, x: 0 }}
-      viewport={{ once: true, margin: '-80px' }}
-      transition={{ duration: 0.85, delay, ease: EASE }}
+      viewport={{ once: true, margin: '-60px' }}
+      transition={{ duration: 0.9, delay, ease: EASE }}
       className={className}
     >
       {children}

@@ -4,13 +4,18 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const EASE = [0.25, 0.46, 0.45, 0.94] as const
+const EASE = [0.16, 1, 0.3, 1] as const
 
 export default function HeroSection() {
   return (
     <div className="relative h-screen overflow-hidden">
-      {/* Background image */}
-      <div className="absolute inset-0 scale-110 img-cursor">
+      {/* Background image — scale+fade entrance */}
+      <motion.div
+        initial={{ opacity: 0, scale: 1.06 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.8, ease: EASE }}
+        className="absolute inset-0 img-cursor"
+      >
         <Image
           src="/images/feature.jpg"
           alt="9/11 Memorial reflecting pool, New York City"
@@ -20,7 +25,7 @@ export default function HeroSection() {
           className="object-cover"
         />
         <div className="absolute inset-0 bg-ink/35" />
-      </div>
+      </motion.div>
 
       {/* Centered logo */}
       <motion.div

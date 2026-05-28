@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import type { Project } from '@/lib/projects'
 
-const EASE = [0.25, 0.46, 0.45, 0.94] as const
+const EASE = [0.16, 1, 0.3, 1] as const
 
 interface Props {
   project: Project

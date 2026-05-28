@@ -53,7 +53,7 @@ export default function ContactForm() {
           key="success"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="py-12"
         >
           <p className="font-display text-[clamp(60px,10vw,100px)] leading-none text-signal uppercase">
@@ -68,7 +68,7 @@ export default function ContactForm() {
           key="form"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
+          exit={{ opacity: 0, transition: { duration: 0.2 } }}
           onSubmit={handleSubmit}
           className="space-y-10"
         >

@@ -31,7 +31,7 @@ export default function Nav() {
       <motion.header
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+        transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         className={clsx(
           'fixed top-0 left-0 right-0 z-50 px-6 md:px-10 h-24 flex items-center justify-between transition-colors duration-300',
           scrolled ? 'bg-ink/90 backdrop-blur-sm border-b border-cream/5' : 'bg-transparent'
@@ -55,25 +55,32 @@ export default function Nav() {
               key={link.href}
               initial={{ opacity: 0, y: -8 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 + i * 0.08, duration: 0.5 }}
+              transition={{ delay: 0.1 + i * 0.08, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
             >
               <Link
                 href={link.href}
                 className={clsx(
-                  'text-xs tracking-[0.25em] uppercase font-sans transition-colors duration-200',
+                  'relative text-xs tracking-[0.25em] uppercase font-sans transition-colors duration-200 pb-1',
                   pathname.startsWith(link.href)
                     ? 'text-signal'
                     : 'text-cream/60 hover:text-cream'
                 )}
               >
                 {link.label}
+                {pathname.startsWith(link.href) && (
+                  <motion.span
+                    layoutId="nav-active"
+                    className="absolute -bottom-0.5 left-0 right-0 h-px bg-signal"
+                    transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+                  />
+                )}
               </Link>
             </motion.div>
           ))}
           <motion.div
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 + links.length * 0.08, duration: 0.5 }}
+            transition={{ delay: 0.1 + links.length * 0.08, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
           >
             <Link
               href="https://calendly.com/pmilaythong-info"
@@ -118,7 +125,7 @@ export default function Nav() {
             ? { opacity: 1, pointerEvents: 'auto' as const }
             : { opacity: 0, pointerEvents: 'none' as const }
         }
-        transition={{ duration: 0.35 }}
+        transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
         className="fixed inset-0 z-40 bg-ink flex flex-col justify-center items-start px-10 gap-6 md:hidden"
       >
         {links.map((link, i) => (
@@ -130,7 +137,7 @@ export default function Nav() {
                 ? { opacity: 1, x: 0 }
                 : { opacity: 0, x: -30 }
             }
-            transition={{ delay: menuOpen ? i * 0.07 : 0, duration: 0.4 }}
+            transition={{ delay: menuOpen ? i * 0.06 : (links.length - 1 - i) * 0.03, duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
           >
             <Link
               href={link.href}
@@ -148,7 +155,7 @@ export default function Nav() {
         <motion.div
           initial={false}
           animate={menuOpen ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
-          transition={{ delay: menuOpen ? links.length * 0.07 : 0, duration: 0.4 }}
+          transition={{ delay: menuOpen ? links.length * 0.06 : 0, duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
         >
           <Link
             href="https://calendly.com/pmilaythong-info"
