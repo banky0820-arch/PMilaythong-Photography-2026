@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import ScrollReveal from '@/components/ScrollReveal'
-import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Client Portfolio',
@@ -23,12 +22,14 @@ export default function PortfolioPage() {
         <p className="font-sans text-sm text-cream/30 leading-[1.8] max-w-md mb-12">
           Didn&apos;t receive your gallery link? Reach out and I&apos;ll resend it right away.
         </p>
-        <Link
-          href="/contact"
+        <a
+          href="https://pmilaythongphotography.fast.io/portal/6op247nanqny7fgl24dztwlncgikp"
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-block border border-cream/20 text-cream font-sans text-xs tracking-[0.2em] uppercase font-medium px-8 py-4 hover:border-signal hover:text-signal transition-colors duration-200"
         >
-          Contact Me
-        </Link>
+          Access Your Gallery
+        </a>
       </ScrollReveal>
     </div>
   )
