@@ -20,7 +20,11 @@ export default function PortfolioPage() {
           Your photos have been delivered to your private online gallery. Check your email for the gallery link and access instructions.
         </p>
         <p className="font-sans text-sm text-cream/30 leading-[1.8] max-w-md mb-12">
-          Didn&apos;t receive your gallery link? Reach out and I&apos;ll resend it right away.
+          Didn&apos;t receive your gallery link?{' '}
+          <a href="/contact" className="underline underline-offset-2 hover:text-cream/60 transition-colors duration-200">
+            Reach out
+          </a>{' '}
+          and I&apos;ll resend it right away.
         </p>
         <a
           href="https://pmilaythongphotography.fast.io/portal/6op247nanqny7fgl24dztwlncgikp"

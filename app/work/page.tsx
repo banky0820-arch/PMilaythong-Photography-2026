@@ -6,8 +6,10 @@ import ScrollReveal from '@/components/ScrollReveal'
 export const metadata: Metadata = {
   title: 'Work',
   description:
-    'Photography portfolio — architecture, portrait, editorial, and landscape. Selected projects from 2020–2024.',
+    'Photography portfolio — pet portraits, landscape, and outdoor sessions. Selected projects by PMilaythong Photography.',
 }
+
+const minYear = Math.min(...projects.map((p) => p.year))
 
 export default function WorkPage() {
   return (
@@ -18,7 +20,7 @@ export default function WorkPage() {
           All Work
         </h1>
         <p className="font-sans text-xs text-cream/35 mt-5 tracking-[0.2em] uppercase">
-          {projects.length} projects &mdash; 2020&ndash;{new Date().getFullYear()}
+          {projects.length} projects &middot; {minYear}&ndash;{new Date().getFullYear()}
         </p>
       </ScrollReveal>
 
