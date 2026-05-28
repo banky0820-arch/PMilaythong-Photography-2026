@@ -23,14 +23,12 @@ export default function PortfolioPage() {
         <p className="font-sans text-sm text-cream/30 leading-[1.8] max-w-md mb-12">
           Didn&apos;t receive your gallery link? Reach out and I&apos;ll resend it right away.
         </p>
-        <a
-          href="https://pmilaythongphotography.fast.io/portal/6m64gaxv6xqvvev4nnp6d75l7w4n3"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          href="/contact"
           className="inline-block border border-cream/20 text-cream font-sans text-xs tracking-[0.2em] uppercase font-medium px-8 py-4 hover:border-signal hover:text-signal transition-colors duration-200"
         >
-          Get in Touch
-        </a>
+          Contact Me
+        </Link>
       </ScrollReveal>
     </div>
   )

@@ -75,7 +75,7 @@ export default function AboutPage() {
 
       {/* Approach columns */}
       <section className="px-6 md:px-10 py-24 md:py-32 border-t border-cream/10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
           {services.map(({ label, body }, i) => (
             <ScrollReveal key={label} delay={i * 0.1}>
               <p className="font-sans text-[10px] tracking-[0.28em] uppercase text-signal mb-5">
