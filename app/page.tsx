@@ -108,7 +108,7 @@ export default function HomePage() {
           <ScrollReveal delay={0.1} className="py-10 md:py-0 md:pl-16">
             <div className="flex items-center gap-4 mb-4">
               <p className="font-sans text-[10px] tracking-[0.28em] uppercase text-cream/35">Signature</p>
-              <span className="font-sans text-[9px] tracking-[0.2em] uppercase bg-signal text-ink px-2 py-1">Most Popular</span>
+              <span className="font-sans text-[11px] tracking-[0.2em] uppercase bg-signal text-ink px-2 py-1">Most Popular</span>
             </div>
             <p className="font-display text-[clamp(56px,7vw,96px)] leading-none text-cream mb-1">$325</p>
             <p className="font-sans text-sm text-cream/50 leading-[1.8] mb-8 max-w-sm">

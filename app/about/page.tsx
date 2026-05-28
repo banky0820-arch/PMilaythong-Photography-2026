@@ -46,13 +46,13 @@ export default function AboutPage() {
             <h1 className="font-display text-[clamp(52px,6vw,100px)] leading-[0.88] text-cream uppercase mb-10">
               PMilaythong<br />Photography
             </h1>
-            <p className="font-sans text-lg text-cream/70 leading-[1.8] mb-6">
+            <p className="font-sans text-lg text-cream/90 leading-[1.8] mb-6 max-w-[60ch]">
               I photograph families and their dogs to capture their raw emotions, beauty, and personality exactly as they are. Every frame is a quiet argument against forgetting. This is outdoor photography rooted in natural light and honest moments, built to outlast the day it was taken.
             </p>
-            <p className="font-sans text-base text-cream leading-[1.8] mb-6">
+            <p className="font-sans text-base text-cream/65 leading-[1.8] mb-6 max-w-[65ch]">
               Photography has been part of my life since I was nine years old, when a camera first landed in my hands and never really left. In college, it became a discipline, learning the fundamentals, developing my first black and white films in a darkroom, understanding light before I understood why it moved me. That foundation never left either.
             </p>
-            <p className="font-sans text-base text-cream leading-[1.8]">
+            <p className="font-sans text-base text-cream/65 leading-[1.8] max-w-[65ch]">
               Today, my camera is an extension of my creativity and vision, and every session is a chance to prove that the best moments aren&apos;t staged. They&apos;re found.
             </p>
           </ScrollReveal>
