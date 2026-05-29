@@ -36,7 +36,7 @@ export default function HeroSection() {
           transition={{ delay: 0.2, duration: 0.8, ease: EASE }}
           className="font-sans text-[10px] md:text-[11px] tracking-[0.28em] uppercase text-signal mb-5 [text-shadow:0_1px_14px_rgb(0_0_0_/_0.75)]"
         >
-          Pet, Family &amp; Outdoor Portraits
+          San Diego &middot; Pet, Family &amp; Outdoor Portraits
         </motion.p>
 
         <motion.h1
