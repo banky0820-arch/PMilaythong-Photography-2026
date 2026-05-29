@@ -39,12 +39,6 @@ body {
   color: var(--color-ink);
 }
 
-/* Focus-visible ring — keyboard navigation */
-:focus-visible {
-  outline: 2px solid var(--color-signal);
-  outline-offset: 3px;
-}
-
 /* Thin orange scrollbar */
 ::-webkit-scrollbar {
   width: 3px;

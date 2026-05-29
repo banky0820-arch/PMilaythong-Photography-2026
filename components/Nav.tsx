@@ -41,9 +41,9 @@ export default function Nav() {
           <Image
             src="/images/logo.png"
             alt="PMilaythong Photography"
-            width={868}
-            height={183}
-            className="h-12 md:h-14 w-auto"
+            width={174}
+            height={80}
+            className="h-20 w-auto"
             priority
           />
         </Link>

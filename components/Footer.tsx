@@ -11,9 +11,9 @@ export default function Footer() {
           <Image
             src="/images/logo.png"
             alt="PMilaythong Photography"
-            width={868}
-            height={183}
-            className="h-12 w-auto"
+            width={174}
+            height={80}
+            className="h-20 w-auto"
           />
         </Link>
 

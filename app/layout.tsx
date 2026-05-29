@@ -3,7 +3,6 @@ import { Bebas_Neue, DM_Sans } from 'next/font/google'
 import './globals.css'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
-import Providers from '@/components/Providers'
 
 const bebasNeue = Bebas_Neue({
   weight: '400',
@@ -43,11 +42,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${bebasNeue.variable} ${dmSans.variable}`}>
       <body>
-        <Providers>
-          <Nav />
-          <main>{children}</main>
-          <Footer />
-        </Providers>
+        <Nav />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   )
