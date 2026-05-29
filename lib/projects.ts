@@ -92,7 +92,6 @@ export const projects: Project[] = [
     coverImageAlt: 'Two Corgis cheek to cheek in star-print bandanas among monstera leaves',
     images: [
       { src: '/images/gallery/03.jpg', alt: 'Two Corgis sitting on grass in front of roses', width: 1400, height: 1015 },
-      { src: '/images/works/01.jpg', alt: 'Corgi black and white closeup portrait', width: 1200, height: 900 },
       { src: '/images/gallery/04.jpg', alt: 'Shih Tzu rolling in the grass', width: 1200, height: 900 },
       { src: '/images/gallery/05.jpg', alt: 'Shih Tzu black and white with striped tie', width: 1200, height: 900 },
       { src: '/images/gallery/21.jpg', alt: 'Small dog in a skull-print bandana resting on its owner\'s shoulder, black and white', width: 1600, height: 1067 },
