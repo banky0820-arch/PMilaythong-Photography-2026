@@ -25,7 +25,7 @@ export default function HeroSection() {
           className="object-cover object-center"
         />
         {/* Bottom-weighted gradient for legibility under the text */}
-        <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/35 to-ink/25" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/55 to-ink/30" />
       </motion.div>
 
       {/* Bottom-left content */}
@@ -34,7 +34,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8, ease: EASE }}
-          className="font-sans text-[10px] md:text-[11px] tracking-[0.28em] uppercase text-signal mb-5"
+          className="font-sans text-[10px] md:text-[11px] tracking-[0.28em] uppercase text-signal mb-5 [text-shadow:0_1px_14px_rgb(0_0_0_/_0.75)]"
         >
           San Diego &middot; Family, Pet &amp; Outdoor Portraits
         </motion.p>
@@ -43,7 +43,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.32, duration: 1.1, ease: EASE }}
-          className="font-display text-[clamp(44px,8.5vw,150px)] leading-[0.9] text-cream uppercase max-w-[15ch]"
+          className="font-display text-[clamp(44px,8.5vw,150px)] leading-[0.9] text-cream uppercase max-w-[15ch] [text-shadow:0_2px_30px_rgb(0_0_0_/_0.45)]"
         >
           The Moment Inside
           <br />
@@ -54,7 +54,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.55, duration: 0.9, ease: EASE }}
-          className="mt-6 font-sans text-base md:text-lg text-cream/70 leading-relaxed max-w-[48ch]"
+          className="mt-6 font-sans text-base md:text-lg text-cream/80 leading-relaxed max-w-[48ch] [text-shadow:0_1px_16px_rgb(0_0_0_/_0.6)]"
         >
           Natural-light photography for families and their dogs, shot on
           location across San Diego. Honest moments, caught as they happen.
