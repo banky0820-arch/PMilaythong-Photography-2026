@@ -43,7 +43,7 @@ export default function Nav() {
             alt="PMilaythong Photography"
             width={174}
             height={80}
-            className="h-20 w-auto"
+            className="h-20 w-auto -ml-[11px]"
             priority
           />
         </Link>
