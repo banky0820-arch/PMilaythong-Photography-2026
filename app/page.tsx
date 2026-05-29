@@ -117,9 +117,9 @@ export default function HomePage() {
             <p className="font-sans text-[10px] tracking-[0.28em] uppercase text-signal mb-4">Session highlights</p>
             <ul className="flex flex-col gap-3 mb-10">
               {[
-                '1-hour session, up to two locations',
+                '1-hour session, one outdoor location',
                 '15–25 hand-edited images',
-                'Outfit change between locations',
+                'Outfit changes welcome',
                 'Gallery, 60-day access',
                 'Delivered within 10 business days',
               ].map((item) => (
