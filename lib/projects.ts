@@ -95,6 +95,7 @@ export const projects: Project[] = [
       { src: '/images/gallery/21.jpg', alt: 'Small dog in a skull-print bandana resting on its owner\'s shoulder, black and white', width: 1600, height: 1067 },
       { src: '/images/gallery/26.jpg', alt: 'Two Corgis in star-print bandanas sitting side by side among monstera leaves', width: 1600, height: 1177 },
       { src: '/images/gallery/24.jpg', alt: 'Tan Chihuahua looking up wearing a stars-and-stripes bandana', width: 1600, height: 1067 },
+      { src: '/images/gallery/27.jpg', alt: 'Gray and white Shih Tzu in a red polka-dot bandana among rose petals', width: 1067, height: 1600 },
     ],
     featured: true,
   },
