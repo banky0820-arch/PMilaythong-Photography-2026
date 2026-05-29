@@ -73,7 +73,9 @@ export default function HeroSection() {
             View Work
           </Link>
           <Link
-            href="/contact"
+            href="https://calendly.com/pmilaythong-info"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block border border-cream/25 text-cream font-sans text-xs tracking-[0.2em] uppercase font-medium px-8 py-4 hover:border-signal hover:text-signal transition-colors duration-200"
           >
             Book a Session
