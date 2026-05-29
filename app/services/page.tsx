@@ -73,7 +73,6 @@ export default function ServicesPage() {
             {[
               '1-hour session, one outdoor location',
               '15–25 hand-edited images',
-              'Outfit changes welcome',
               'Gallery, 60-day access',
               'Delivered within 10 business days',
             ].map((item) => (
