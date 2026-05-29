@@ -39,7 +39,6 @@ export const projects: Project[] = [
       { src: '/images/gallery/09.jpg', alt: 'Central Park Reservoir with Manhattan skyline', width: 1600, height: 900 },
       { src: '/images/gallery/12.jpg', alt: 'WTC Oculus and One World Trade Center', width: 1200, height: 900 },
       { src: '/images/gallery/13.jpg', alt: 'Empire State Building at night', width: 800, height: 1200 },
-      { src: '/images/gallery/11.jpg', alt: 'Statue of Liberty from the water', width: 1600, height: 900 },
       { src: '/images/gallery/14.jpg', alt: 'Manhattan Bridge steel detail', width: 800, height: 1200 },
       { src: '/images/works/03.jpg', alt: 'WTC Oculus and One World Trade, black and white', width: 1200, height: 900 },
       { src: '/images/gallery/10.jpg', alt: 'Waterfall and rock garden landscape', width: 1200, height: 900 },
