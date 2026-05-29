@@ -89,32 +89,55 @@ export default function ProjectPage({ params }: Props) {
 
       {/* Gallery */}
       <div className="px-6 md:px-10 pb-28">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
-          {project.images.map((image, i) => {
-            const isFirstLandscape = i === 0 && image.width > image.height
-            return (
-              <ScrollReveal
-                key={i}
-                delay={i * 0.08}
-                className={isFirstLandscape ? 'md:col-span-2' : ''}
-              >
-                <div
-                  className={`relative overflow-hidden img-cursor ${
-                    isFirstLandscape ? 'aspect-[16/9]' : 'aspect-[3/4]'
-                  }`}
-                >
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    fill
-                    sizes={isFirstLandscape ? '100vw' : '(max-width: 768px) 100vw, 50vw'}
-                    className="object-cover"
-                  />
-                </div>
-              </ScrollReveal>
-            )
-          })}
-        </div>
+        {(() => {
+          const [first, ...rest] = project.images
+          const firstIsBanner = !!first && first.width > first.height
+          const flow = firstIsBanner ? rest : project.images
+
+          return (
+            <>
+              {/* Lead landscape runs full-bleed as a 16:9 banner */}
+              {firstIsBanner && (
+                <ScrollReveal className="mb-4 md:mb-5">
+                  <div className="relative aspect-[16/9] overflow-hidden img-cursor">
+                    <Image
+                      src={first.src}
+                      alt={first.alt}
+                      fill
+                      sizes="100vw"
+                      className="object-cover"
+                    />
+                  </div>
+                </ScrollReveal>
+              )}
+
+              {/* Everything else flows in a masonry that respects each frame's
+                  native aspect ratio — no forced crop on wide or tall images. */}
+              <div className="columns-1 md:columns-2 gap-4 md:gap-5">
+                {flow.map((image, i) => (
+                  <ScrollReveal
+                    key={`${image.src}-${i}`}
+                    delay={(i % 2) * 0.08}
+                    className="mb-4 md:mb-5 break-inside-avoid"
+                  >
+                    <div
+                      className="relative overflow-hidden img-cursor"
+                      style={{ aspectRatio: `${image.width} / ${image.height}` }}
+                    >
+                      <Image
+                        src={image.src}
+                        alt={image.alt}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        className="object-cover"
+                      />
+                    </div>
+                  </ScrollReveal>
+                ))}
+              </div>
+            </>
+          )
+        })()}
       </div>
 
       {/* Prev / Next navigation */}

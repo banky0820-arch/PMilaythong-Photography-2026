@@ -8,8 +8,8 @@ import { useState, useEffect } from 'react'
 import clsx from 'clsx'
 
 const links = [
-  { href: '/work', label: 'Work' },
   { href: '/about', label: 'About' },
+  { href: '/work', label: 'Work' },
   { href: '/services', label: 'Services' },
   { href: '/contact', label: 'Contact' },
   { href: '/portfolio', label: 'Client Portfolio' },
@@ -97,6 +97,8 @@ export default function Nav() {
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={menuOpen}
+          aria-controls="mobile-menu"
           className="md:hidden relative z-[60] flex flex-col gap-[5px] p-2"
         >
           <motion.span
@@ -119,11 +121,17 @@ export default function Nav() {
 
       {/* Mobile fullscreen overlay */}
       <motion.div
+        id="mobile-menu"
+        aria-hidden={!menuOpen}
         initial={false}
         animate={
           menuOpen
-            ? { opacity: 1, pointerEvents: 'auto' as const }
-            : { opacity: 0, pointerEvents: 'none' as const }
+            ? { opacity: 1, pointerEvents: 'auto' as const, visibility: 'visible' as const }
+            : {
+                opacity: 0,
+                pointerEvents: 'none' as const,
+                transitionEnd: { visibility: 'hidden' as const },
+              }
         }
         transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
         className="fixed inset-0 z-40 bg-ink flex flex-col justify-center items-start px-10 gap-6 md:hidden"

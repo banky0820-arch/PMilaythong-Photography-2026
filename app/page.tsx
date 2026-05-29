@@ -18,30 +18,27 @@ export default function HomePage() {
       {/* Approach section */}
       <section className="px-6 md:px-10 py-24 md:py-32 border-t border-cream/10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
-          <ScrollReveal>
+          <ScrollReveal distance={64} duration={1.1}>
             <p className="font-sans text-[10px] tracking-[0.28em] uppercase text-signal mb-6">
               Approach
             </p>
             <p className="font-sans text-xl text-cream/75 leading-[1.75] mb-6 max-w-[68ch]">
-              Photography is my passion and at the heart of it is the pursuit of raw emotion. The kind that can&apos;t be directed, only caught. It is a calling I answered from the moment I held my first camera at nine years old, when I understood that light and time were already telling a story, and that I had the ability to preserve it. That realization never left me.
+              Photography is my passion and at the heart of it is the pursuit of raw emotion. The kind that can&apos;t be directed, only caught.
             </p>
-            <p className="font-sans text-base text-cream/55 leading-[1.75] mb-6 max-w-[68ch]">
-              I work exclusively on location, in natural light, because the surroundings are never just a backdrop, they are part of the story. The way light falls through trees, the open sky at golden hour, the quiet energy of a place that has never been staged. These are the conditions where the most honest images live.
-            </p>
-            <p className="font-sans text-base text-cream/55 leading-[1.75] mb-6 max-w-[68ch]">
-              I love working with dogs because they cannot pretend. They bring unfiltered personality and emotion to every frame, and that energy elevates everyone around them. There is something extraordinary about photographing a family in their element, kids, dogs, and all the beautiful chaos that comes with them, and finding the moment inside the moment.
-            </p>
-            <p className="font-sans text-base text-cream/55 leading-[1.75] mb-6 max-w-[68ch]">
-              Every session is an exercise in patience, presence, and trust. Every final image is a testament to what happens when all three come together.
-            </p>
-            <p className="font-sans text-base text-signal leading-[1.75] max-w-[68ch]">
+            <p className="font-sans text-base text-signal leading-[1.75] mb-8 max-w-[68ch]">
               I do not simply take photographs. I create permanent records of fleeting moments. Images built to outlast the day they were taken, and to mean more with every passing year.
             </p>
+            <Link
+              href="/about"
+              className="inline-block font-sans text-xs tracking-[0.2em] uppercase text-cream/60 border-b border-cream/20 pb-1 hover:text-signal hover:border-signal transition-colors duration-200"
+            >
+              More About My Approach
+            </Link>
           </ScrollReveal>
 
           <div className="flex flex-col justify-end gap-0 divide-y divide-cream/10">
             {services.map((service, i) => (
-              <ScrollReveal key={service} delay={i * 0.09}>
+              <ScrollReveal key={service} delay={i * 0.09} distance={20} duration={0.7}>
                 <div className="py-7 flex items-center gap-6">
                   <span className="font-display text-5xl text-cream/12 tabular-nums w-14 shrink-0 leading-none">
                     {String(i + 1).padStart(2, '0')}
@@ -70,7 +67,7 @@ export default function HomePage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0 divide-y md:divide-y-0 md:divide-x divide-cream/10 mb-14 items-start">
           {/* Essential */}
-          <ScrollReveal className="py-10 md:py-0 md:pr-16">
+          <ScrollReveal distance={28} duration={0.8} className="py-10 md:py-0 md:pr-16">
             <p className="font-sans text-[10px] tracking-[0.28em] uppercase text-cream/35 mb-4">Essential</p>
             <p className="font-display text-[clamp(56px,7vw,96px)] leading-none text-cream mb-3">$175</p>
             <p className="font-sans text-sm text-cream/50 leading-[1.8] max-w-sm">
@@ -79,7 +76,7 @@ export default function HomePage() {
           </ScrollReveal>
 
           {/* Signature */}
-          <ScrollReveal delay={0.1} className="py-10 md:py-0 md:pl-16">
+          <ScrollReveal delay={0.1} distance={28} duration={0.8} className="py-10 md:py-0 md:pl-16">
             <div className="flex items-center gap-4 mb-4">
               <p className="font-sans text-[10px] tracking-[0.28em] uppercase text-cream/35">Signature</p>
               <span className="font-sans text-[11px] tracking-[0.2em] uppercase bg-signal text-ink px-2 py-1">Most Popular</span>
@@ -103,7 +100,7 @@ export default function HomePage() {
 
       {/* Full-bleed CTA */}
       <section className="px-6 md:px-10 py-28 md:py-40 border-t border-cream/10">
-        <ScrollReveal>
+        <ScrollReveal distance={72} duration={1.2}>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-12">
             <h2 className="font-display text-[clamp(60px,13vw,190px)] leading-[0.88] text-cream uppercase">
               Let&apos;s Make<br />Something<br />Lasting
