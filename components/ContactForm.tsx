@@ -44,7 +44,7 @@ export default function ContactForm() {
   }
 
   const fieldClass =
-    'w-full bg-transparent border-b border-cream/20 focus:border-cream py-4 text-cream font-sans text-base placeholder:text-cream/25 outline-none transition-colors duration-200'
+    'w-full bg-transparent border-b border-cream/20 focus:border-cream py-4 text-cream font-sans text-base placeholder:text-cream/25 outline-none focus-visible:outline-none focus-visible:border-signal transition-colors duration-200'
 
   return (
     <AnimatePresence mode="wait">
@@ -74,12 +74,14 @@ export default function ContactForm() {
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
             <div>
-              <label className="block font-sans text-[10px] tracking-[0.28em] uppercase text-cream/35 mb-3">
+              <label htmlFor="contact-name" className="block font-sans text-[10px] tracking-[0.28em] uppercase text-cream/35 mb-3">
                 Name
               </label>
               <input
+                id="contact-name"
                 type="text"
                 required
+                autoComplete="name"
                 value={form.name}
                 onChange={set('name')}
                 placeholder="Your name"
@@ -87,12 +89,14 @@ export default function ContactForm() {
               />
             </div>
             <div>
-              <label className="block font-sans text-[10px] tracking-[0.28em] uppercase text-cream/35 mb-3">
+              <label htmlFor="contact-email" className="block font-sans text-[10px] tracking-[0.28em] uppercase text-cream/35 mb-3">
                 Email
               </label>
               <input
+                id="contact-email"
                 type="email"
                 required
+                autoComplete="email"
                 value={form.email}
                 onChange={set('email')}
                 placeholder="your@email.com"
@@ -102,10 +106,11 @@ export default function ContactForm() {
           </div>
 
           <div>
-            <label className="block font-sans text-[10px] tracking-[0.28em] uppercase text-cream/35 mb-3">
+            <label htmlFor="contact-subject" className="block font-sans text-[10px] tracking-[0.28em] uppercase text-cream/35 mb-3">
               Subject
             </label>
             <select
+              id="contact-subject"
               required
               value={form.subject}
               onChange={set('subject')}
@@ -123,10 +128,11 @@ export default function ContactForm() {
           </div>
 
           <div>
-            <label className="block font-sans text-[10px] tracking-[0.28em] uppercase text-cream/35 mb-3">
+            <label htmlFor="contact-message" className="block font-sans text-[10px] tracking-[0.28em] uppercase text-cream/35 mb-3">
               Message
             </label>
             <textarea
+              id="contact-message"
               required
               rows={5}
               value={form.message}
@@ -137,7 +143,7 @@ export default function ContactForm() {
           </div>
 
           {status === 'error' && (
-            <p className="font-sans text-sm text-signal">
+            <p role="alert" className="font-sans text-sm text-signal">
               Something went wrong. Please try again or email directly at{' '}
               <a
                 href="mailto:info@pmilaythong.com"
