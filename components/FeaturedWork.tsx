@@ -114,7 +114,7 @@ function Tile({
             {project.title}
           </h3>
           <p className="font-sans text-[10px] tracking-[0.28em] uppercase text-cream/35 mt-2">
-            {project.category}&ensp;&mdash;&ensp;{project.year}
+            {project.category}&ensp;&ndash;&ensp;{project.year}
           </p>
         </div>
         <span className="font-sans text-xs text-cream/25 group-hover:text-signal transition-colors duration-200 shrink-0 mt-1">

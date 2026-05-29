@@ -97,7 +97,7 @@ export default function ServicesPage() {
       <ScrollReveal>
         <div className="border-t border-cream/10 pt-16 mb-16">
           <p className="font-sans text-[10px] tracking-[0.28em] uppercase text-signal mb-8">Add-ons &amp; Upgrades</p>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-0 divide-y divide-cream/10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-0 divide-y divide-cream/10">
             {[
               { label: 'Extra 30 min', price: '+$85' },
               { label: 'Rush delivery (48hr)', price: '+$75' },

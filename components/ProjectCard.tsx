@@ -51,7 +51,7 @@ export default function ProjectCard({ project, index }: Props) {
             </span>
           </div>
           <p className="font-sans text-[10px] tracking-[0.28em] uppercase text-cream/35 mt-2">
-            {project.category}&ensp;&mdash;&ensp;{project.client}
+            {project.category}&ensp;&ndash;&ensp;{project.client}
           </p>
         </div>
       </Link>

@@ -67,7 +67,7 @@ export default function AboutPage() {
               &ldquo;When words become unclear, I shall focus with photographs. When images become inadequate, I shall be content with silence.&rdquo;
             </p>
             <footer className="mt-8 font-sans text-xs tracking-[0.28em] uppercase text-signal">
-              &mdash; Ansel Adams
+              &ndash; Ansel Adams
             </footer>
           </blockquote>
         </ScrollReveal>
