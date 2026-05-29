@@ -3,7 +3,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 
 export const metadata: Metadata = {
   title: 'Client Portfolio',
-  description: 'Access your private client gallery from PMilaythong Photography.',
+  description: 'PMilaythong Photography — access your private client gallery.',
 }
 
 export default function PortfolioPage() {

@@ -55,7 +55,7 @@ export const projects: Project[] = [
     client: 'Self-directed',
     location: 'California, USA',
     description:
-      'A portrait series following Kagome, a tricolor Corgi whose expression shifts from mischief to quiet contemplation in a single frame. Shot across seasons and settings, the project explores personality through light, environment, and the bond between subject and camera.',
+      'A portrait series following Kagome — a tricolor Corgi whose expression shifts from mischief to quiet contemplation in a single frame. Shot across seasons and settings, the project explores personality through light, environment, and the bond between subject and camera.',
     coverImage: '/images/gallery/02.jpg',
     coverImageAlt: 'Corgi with pink bandana in front of blooming roses',
     images: [
@@ -96,7 +96,7 @@ export const projects: Project[] = [
     client: 'Self-directed',
     location: 'California, USA',
     description:
-      'A quieter side of the pet portrait work: close studies in natural light that prioritize mood over moment. Black and white conversions reduce the subject to its essentials: eyes, expression, and the story held in a single look.',
+      'A quieter side of the pet portrait work — close studies in natural light that prioritize mood over moment. Black and white conversions reduce the subject to its essentials: eyes, expression, and the story held in a single look.',
     coverImage: '/images/works/01.jpg',
     coverImageAlt: 'Corgi black and white portrait closeup',
     images: [

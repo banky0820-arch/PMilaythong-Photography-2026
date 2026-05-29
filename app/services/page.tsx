@@ -5,7 +5,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 export const metadata: Metadata = {
   title: 'Services',
   description:
-    'Outdoor portrait, pet, and landscape sessions in San Diego from PMilaythong Photography. Simple, honest pricing built around your day.',
+    'PMilaythong Photography — outdoor portrait, pet, and landscape sessions in San Diego. Simple, honest pricing built around your day.',
 }
 
 export default function ServicesPage() {
