@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: '%s | PMilaythong Photography',
   },
   description:
-    'Award-winning photography spanning architecture, portrait, editorial, and landscape. Based in San Diego.',
+    'Natural-light family, pet, and outdoor portrait photography in San Diego. Honest moments with families and their dogs, captured on location.',
   openGraph: {
     type: 'website',
     siteName: 'PMilaythong Photography',

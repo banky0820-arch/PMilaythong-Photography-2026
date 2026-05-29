@@ -6,7 +6,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'PMilaythong Photography — capturing architecture, cityscapes, and pet portraits with an eye for light, character, and quiet moments.',
+    'Meet the photographer behind PMilaythong Photography. Natural-light portraits of families and their dogs across San Diego, with an eye for character and quiet moments.',
 }
 
 const services = [

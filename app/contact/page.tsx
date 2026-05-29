@@ -5,7 +5,7 @@ import ContactForm from '@/components/ContactForm'
 export const metadata: Metadata = {
   title: 'Contact',
   description:
-    'Commission a project or get in touch with PMilaythong Photography. Available for editorial, commercial, and architectural photography globally.',
+    'Book a session or get in touch with PMilaythong Photography. Outdoor family, pet, and portrait photography across San Diego.',
 }
 
 const socials = [
