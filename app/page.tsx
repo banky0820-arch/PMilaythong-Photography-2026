@@ -205,7 +205,7 @@ export default function HomePage() {
         <ScrollReveal>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-12">
             <h2 className="font-display text-[clamp(60px,13vw,190px)] leading-[0.88] text-cream uppercase">
-              Let&apos;s<br />Make<br />Work
+              Let&apos;s Make<br />Something<br />Lasting
             </h2>
             <div className="flex flex-col gap-4 md:items-end">
               <Link
