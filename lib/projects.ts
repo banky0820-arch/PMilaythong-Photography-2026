@@ -104,6 +104,7 @@ export const projects: Project[] = [
       { src: '/images/gallery/31.jpg', alt: 'Tan Corgi mix in a Spider-Man costume in profile, with a Shih Tzu watching behind', width: 1600, height: 865 },
       { src: '/images/gallery/34.jpg', alt: 'Two Corgis in bumblebee costumes sitting in front of monstera leaves', width: 1600, height: 1067 },
       { src: '/images/gallery/35.jpg', alt: 'Four dogs in holiday pajamas posing by a Christmas tree', width: 1600, height: 1082 },
+      { src: '/images/gallery/36.jpg', alt: 'Gray and white Shih Tzu wearing a bone-shaped name tag', width: 605, height: 830 },
     ],
     featured: true,
   },
