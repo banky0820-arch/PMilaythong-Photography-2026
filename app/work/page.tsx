@@ -6,7 +6,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 export const metadata: Metadata = {
   title: 'Work',
   description:
-    'Photography portfolio — pet portraits, landscape, and outdoor sessions. Selected projects by PMilaythong Photography.',
+    'Selected photography by PMilaythong Photography: pet portraits, family sessions, and landscape work, shot outdoors in natural light.',
 }
 
 const minYear = Math.min(...projects.map((p) => p.year))

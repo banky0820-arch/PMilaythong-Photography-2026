@@ -36,7 +36,7 @@ export async function POST(req: NextRequest) {
     from,
     to,
     reply_to: email,
-    subject: `[Portfolio] ${subject} — ${name}`,
+    subject: `[Portfolio] ${subject}: ${name}`,
     html: `
       <!DOCTYPE html>
       <html>

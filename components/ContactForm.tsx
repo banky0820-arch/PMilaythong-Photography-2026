@@ -6,11 +6,10 @@ import { motion, AnimatePresence } from 'framer-motion'
 type Status = 'idle' | 'loading' | 'success' | 'error'
 
 const subjects = [
-  'Essential',
-  'Signature',
-  'Portrait Session',
-  'Print Purchase',
-  'Other',
+  'Essential session ($175)',
+  'Signature session ($325)',
+  'Print purchase',
+  'Something else',
 ]
 
 export default function ContactForm() {
@@ -137,7 +136,7 @@ export default function ContactForm() {
               rows={5}
               value={form.message}
               onChange={set('message')}
-              placeholder="Tell me about your project, timeline, and budget..."
+              placeholder="Tell me about your shoot, who's coming (dogs included), and a date you have in mind..."
               className={`${fieldClass} resize-none`}
             />
           </div>
