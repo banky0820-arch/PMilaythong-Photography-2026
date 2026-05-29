@@ -17,43 +17,54 @@ export default function HeroSection() {
         className="absolute inset-0 img-cursor"
       >
         <Image
-          src="/images/feature.jpg"
-          alt="9/11 Memorial reflecting pool, New York City"
+          src="/images/gallery/02.jpg"
+          alt="Corgi with a pink bandana among blooming roses, San Diego"
           fill
           priority
           sizes="100vw"
-          className="object-cover"
+          className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-ink/35" />
+        {/* Bottom-weighted gradient for legibility under the text */}
+        <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/35 to-ink/25" />
       </motion.div>
 
-      {/* Centered logo */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.0, ease: EASE }}
-        className="absolute inset-0 flex flex-col items-center justify-center px-6 md:px-10"
-      >
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+      {/* Bottom-left content */}
+      <div className="absolute inset-0 flex flex-col justify-end px-6 md:px-10 pb-20 md:pb-24">
+        <motion.p
+          initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.1, ease: EASE }}
+          transition={{ delay: 0.2, duration: 0.8, ease: EASE }}
+          className="font-sans text-[10px] md:text-[11px] tracking-[0.28em] uppercase text-signal mb-5"
         >
-          <Image
-            src="/images/logo.png"
-            alt="PMilaythong Photography"
-            width={700}
-            height={323}
-            className="w-[clamp(240px,70vw,700px)] h-auto"
-            priority
-          />
-        </motion.div>
+          San Diego &middot; Family, Pet &amp; Outdoor Portraits
+        </motion.p>
+
+        <motion.h1
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.32, duration: 1.1, ease: EASE }}
+          className="font-display text-[clamp(44px,8.5vw,150px)] leading-[0.9] text-cream uppercase max-w-[15ch]"
+        >
+          The Moment Inside
+          <br />
+          the Moment
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.55, duration: 0.9, ease: EASE }}
+          className="mt-6 font-sans text-base md:text-lg text-cream/70 leading-relaxed max-w-[48ch]"
+        >
+          Natural-light photography for families and their dogs, shot on
+          location across San Diego. Honest moments, caught as they happen.
+        </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.82, duration: 0.8, ease: EASE }}
-          className="mt-10"
+          transition={{ delay: 0.72, duration: 0.8, ease: EASE }}
+          className="mt-9 flex flex-wrap items-center gap-4"
         >
           <Link
             href="/work"
@@ -61,8 +72,14 @@ export default function HeroSection() {
           >
             View Work
           </Link>
+          <Link
+            href="/contact"
+            className="inline-block border border-cream/25 text-cream font-sans text-xs tracking-[0.2em] uppercase font-medium px-8 py-4 hover:border-signal hover:text-signal transition-colors duration-200"
+          >
+            Book a Session
+          </Link>
         </motion.div>
-      </motion.div>
+      </div>
 
       {/* Scroll indicator — right edge */}
       <motion.div
@@ -80,16 +97,6 @@ export default function HeroSection() {
           className="w-px h-12 bg-gradient-to-b from-cream/35 to-transparent"
         />
       </motion.div>
-
-      {/* Index counter */}
-      <motion.span
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.1, duration: 0.6 }}
-        className="absolute top-20 right-6 md:right-10 font-display text-[10vw] leading-none text-cream/5 select-none pointer-events-none"
-      >
-        01
-      </motion.span>
     </div>
   )
 }
