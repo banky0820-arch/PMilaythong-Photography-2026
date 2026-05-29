@@ -17,12 +17,12 @@ export default function HeroSection() {
         className="absolute inset-0 img-cursor"
       >
         <Image
-          src="/images/gallery/02.jpg"
-          alt="Corgi with a pink bandana among blooming roses, San Diego"
+          src="/images/hero.jpg"
+          alt="Shih Tzu in a striped tie beside a wrapped flower bouquet, San Diego"
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center"
+          className="object-cover object-[72%_35%]"
         />
         {/* Bottom-weighted gradient for legibility under the text */}
         <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/55 to-ink/30" />
@@ -36,7 +36,7 @@ export default function HeroSection() {
           transition={{ delay: 0.2, duration: 0.8, ease: EASE }}
           className="font-sans text-[10px] md:text-[11px] tracking-[0.28em] uppercase text-signal mb-5 [text-shadow:0_1px_14px_rgb(0_0_0_/_0.75)]"
         >
-          San Diego &middot; Family, Pet &amp; Outdoor Portraits
+          Pet, Family &amp; Outdoor Portraits
         </motion.p>
 
         <motion.h1
