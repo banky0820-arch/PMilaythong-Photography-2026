@@ -88,14 +88,13 @@ export const projects: Project[] = [
     location: 'California, USA',
     description:
       'Two dogs, one frame, an ongoing series pairing Corgis and Shih Tzus in natural and styled environments. The work celebrates the distinct personality each animal brings to a shared moment, from sun drenched lawns to intimate indoor studies.',
-    coverImage: '/images/gallery/03.jpg',
-    coverImageAlt: 'Two Corgis sitting on grass in front of roses',
+    coverImage: '/images/gallery/16.jpg',
+    coverImageAlt: 'Two Corgis cheek to cheek in star-print bandanas among monstera leaves',
     images: [
-      { src: '/images/gallery/16.jpg', alt: 'Two Corgis cheek to cheek in star-print bandanas among monstera leaves', width: 1600, height: 1177 },
+      { src: '/images/gallery/03.jpg', alt: 'Two Corgis sitting on grass in front of roses', width: 1400, height: 1015 },
       { src: '/images/works/01.jpg', alt: 'Corgi black and white closeup portrait', width: 1200, height: 900 },
       { src: '/images/gallery/04.jpg', alt: 'Shih Tzu rolling in the grass', width: 1200, height: 900 },
       { src: '/images/gallery/05.jpg', alt: 'Shih Tzu black and white with striped tie', width: 1200, height: 900 },
-      { src: '/images/works/02.jpg', alt: 'Shih Tzu with flowers and a blue tie', width: 1200, height: 900 },
       { src: '/images/gallery/21.jpg', alt: 'Small dog in a skull-print bandana resting on its owner\'s shoulder, black and white', width: 1600, height: 1067 },
       { src: '/images/gallery/26.jpg', alt: 'Two Corgis in star-print bandanas sitting side by side among monstera leaves', width: 1600, height: 1177 },
       { src: '/images/gallery/24.jpg', alt: 'Tan Chihuahua looking up wearing a stars-and-stripes bandana', width: 1600, height: 1067 },
@@ -127,7 +126,6 @@ export const projects: Project[] = [
     images: [
       { src: '/images/gallery/08.jpg', alt: 'Corgi in tall grass, black and white', width: 1200, height: 900 },
       { src: '/images/gallery/05.jpg', alt: 'Shih Tzu with tie, black and white', width: 1200, height: 900 },
-      { src: '/images/works/02.jpg', alt: 'Shih Tzu with flowers and blue tie', width: 1200, height: 900 },
       { src: '/images/gallery/22.jpg', alt: 'Shih Tzu in a polka-dot bandana with balloons behind, black and white', width: 1067, height: 1600 },
     ],
     featured: false,
